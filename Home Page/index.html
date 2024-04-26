@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student  Management System || Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <link rel="stylesheet" href=
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+     
+    <style>
+      header{
+        z-index: 2;
+      }
+      /* .imag{
+  
+  position: relative;
+
+top: 100px;
+z-index: 1;
+
+} */
+
+body{
+  background: #b3b9bf;
+
+}
+
+#slideshow{
+  width: 100%;
+  margin-top: -10px;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+      <div class="logo">
+        <div class="logo1"><img src="logo.jpg" class="log1" alt=""></div>
+         <div class="logo2"> Step Up Acadamy SMS</h1></div>
+      </div>
+       
+        <button class="toggle" id="toggle">☰</button>
+        <nav class="nav" id="nav">
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="viewpost.php">Announcement</a></li>
+            <li class="nav-item"><a class="nav-link" href="/mysm/Admin/php/html/login2.php">Login </a></li>
+            
+          
+         
+       
+          </ul>
+        </nav>
+      </header>
+      <script>
+      var toggle = document.getElementById("toggle");
+      var nav = document.getElementById("nav");
+      toggle.addEventListener("click", function() {
+        nav.classList.toggle("show");
+      });
+      </script>
+
+<p></p>
+<section class="imag">
+    
+            <img src="banner.jpg" id="slideshow">
+    
+<!--     <img src="image/1.jpg" class="imgg" alt="Image of the school"> -->
+<div class="log">
+<p class="sr">Student Managemnet System</p>
+<div class="bst"><p>Better Tomorow, The Best Is Yet To Come!!</p></div>
+<button ><a href="/mysm/Admin/php/html/login2.php">Login  ></a></button>
+</div>
+</section>
+
+<br><br><br>
+<div class="aboutt">
+<div class="about"><h1>About Our School</h1><br>
+<p class="about1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod dolores ratione iste tempora asperiores explicabo magni beatae quidem praesentium, veritatis officia necessitatibus omnis saepe ducimus nostrum voluptates laborum unde illum, aperiam corporis doloremque labore natus quis. Odit, laborum doloribus? Excepturi autem quis quo? Qui totam ad tempora unde officia quam.</p></div>
+</div>
+<div class="news">
+
+</div>
+<div class="upfoot">
+        <div class="bridge">
+
+          <div class="foot"><a class="foot" href="index.html">Home</a></div>
+          <div class="foot"><a class="foot" href="about.html">About</a></div>
+          <div class="foot"><a class="foot" href="#contact">contact</a></div>
+          <div class="foot"><a class="foot" href="viewpost.php">Announcement</a></div>
+          <div class="foot"><a class="foot" href="/mysm/Admin/php/html/login2.php">Login </a></div>
+        </div>
+
+    <div class="bridge1">
+       <div class="address"> <h1>Address</h1><br>
+        <div class="map">
+         <div id="map"></div>
+           <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+              integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+              crossorigin=""></script>
+            <script>
+              // Initialize the map and set its view to the given coordinates and zoom level
+              var map = L.map('map').setView([6.0333, 37.55], 13);
+          
+              // Add a tile layer to the map (e.g. OpenStreetMap)
+              L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 9
+              }).addTo(map);
+          
+              // Create a marker and add it to the map
+              var marker = L.marker([6.0333, 37.55]).addTo(map);
+          
+              // Create a popup and bind it to the marker
+              marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+            </script>
+            <br><p style="font-size: 22px;"><img src="phone.png" alt="" style="height: 17px;">  011678238</p>
+        </div>
+    </div>
+
+            <div class="sms"><h1>SMS</h1><br>Lorem ipsum dolrunt in, pariatur ducimus obcaecati molestiae, adipisci cum nobis harum reprehenderit perferendis repudiandae eaque, ab quisquam earum </div>
+
+    </div>
+</div>
+</div>
+
+
+
+<footer>
+  
+   <div><p  class="copy">&copy; Student managemnt system 2024</p></div>
+</footer>
+
+</body>
+</html>
