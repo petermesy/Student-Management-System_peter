@@ -93,7 +93,7 @@ else{
             if(mysqli_num_rows($result) == 1){
                 $student = mysqli_fetch_assoc($result);
                 $_SESSION['student_id'] = $student['student_id']; // Store student ID in session
-                header('location: home.php'); /1/ Redirect to student dashboard
+                header('location: homestudent.php'); /1/ Redirect to student dashboard
                 exit(); // Stop further execution
             } else {
                 ?><p class="invalid" style="color:red; ">Invalid username/password combination.</p><?php
